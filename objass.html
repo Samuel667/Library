@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	
+	<style type="text/css">
+	body{
+		background-image: url('img/libraryEEEE.png');
+
+		
+		z-index: 10}
+		button{ margin-top: 25px ;
+			cursor:pointer;}
+		h2{
+		 animation: l;
+			animation-duration: 8s;
+			animation-iteration-count: }
+			@keyframes l{
+	0%, 10%{opacity: 0}
+	40%, 600%{opacity: 100}
+
+
+
+
+}
+		
+
+	</style>
+</head>
+<body>
+	<div id="l"><h2  class="card-body" style="color: rgba(350, 800, 1600, 3200);">LIBRARY</h2><h5 style="color: gold;"><marquee>Reading impact but study impact more therefore READ and STUDY </marquee></h5>
+<div  class="row" style="width: 500px height: 800px;>
+<div class="card card-success col-md-4 mt-5 ml-2 container-fluid"  >
+<div class="card-body"style="color: rgba(350, 800, 1600, 3200);>
+ <label for="author">
+ 	AUTHOR:
+ </label>
+ <input type="" name="" id="secondinput"  class="form-control">
+</div>
+
+<div class=card-body style="color: rgba(350, 800, 1600, 3200);>
+  <label for="author">
+ 	TITLE:
+ </label>
+ <input type="" name="" id="firstinput" class="form-control">
+</div>
+
+<div class="card-body" style="color: rgba(350, 800, 1600, 3200);>
+  <label for="author">
+ 	PAGES:
+ </label>
+ <input type="" name="" id="thirdinput" class="form-control">
+ </div>
+
+
+ <div class="card-body">
+ <button  class="btn btn-success form-control" onclick="display()">ADD</button>
+  </div>
+  <div id="ij" style="background-color: red;display:none">
+  	<button onclick="empty()">ok</button>
+  	<h3  style="color ="#fff">please fill the empty space</h3>	
+  	
+  </div>
+
+ <div class="card-body" >
+ 	<button  class="btn btn-info form-control" onclick="show()">DISPLAY BOOKS </button>
+ </div>
+</div ><br><br><br><br>
+
+
+<table id="" class="table table-bordered table-hover col-md-6 container-fluid mt-5" style="color: #fff;" >
+		<thead >
+			<tr>
+				<th>TITLE</th>
+				<th>AUTHOR</th>
+				<th>PAGES</th>
+			</tr>
+		</thead>
+    
+    <tbody id="showtab">
+    	
+    </tbody>
+</table>
+
+</div>
+<body>
+
+
+
+	<script type="text/javascript">
+	 
+function display(){
+var library=JSON.parse(localStorage.books);
+
+var a={TITLE:firstinput.value,AUTHOR:secondinput.value,PAGES:thirdinput.value}	       	
+	 library.push(a);
+	 localStorage.books=JSON.stringify(library);
+	 var relibrary= JSON.parse(localStorage.books);	
+	 console.log(relibrary);
+	 if(firstinput.value==""||secondinput.value==""||thirdinput.value)
+	 	{document.getElementById("ij").style.display="";
+	}
+}
+
+	 function empty(){
+	 	document.getElementById("ij").style.display="none";
+
+	 }
+
+	 
+
+	 function show(){ library=JSON.parse(localStorage.books);
+
+		for  (  var i=0; i<library.length; i++ )
+		{
+ var lis; lis= '<tr><td>'+ library[i].TITLE + '</td>'+'<td>' +library[i]. AUTHOR+'</td>'+'<td>'+library[i].PAGES+'</td></tr>';
+  	 	    showtab.innerHTML+=lis;
+
+	 	
+ } 		
+}
+</script>
+</div>
+</body></div></div>
+</htm>
