@@ -3,73 +3,86 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	
 	<style type="text/css">
 	body{
 		background-image: url('img/libraryEEEE.png');
+		z-index: 10 }
 
-		
-		z-index: 10}
 		button{ margin-top: 25px ;
 			cursor:pointer;}
 		h2{
 		 animation: l;
-			animation-duration: 8s;
-			animation-iteration-count: }
+			animation-duration: 15s;
+			animation-iteration-count:infinite }
 			@keyframes l{
 	0%, 10%{opacity: 0}
-	40%, 600%{opacity: 100}
-
-
-
-
+	40%, 60%{opacity: 100}
 }
 		
 
 	</style>
 </head>
+<!--  -->
 <body>
-	<div id="l"><h2  class="card-body" style="color: rgba(350, 800, 1600, 3200);">LIBRARY</h2><h5 style="color: gold;"><marquee>Reading impact but study impact more therefore READ and STUDY </marquee></h5>
-<div  class="row" style="width: 500px height: 800px;>
-<div class="card card-success col-md-4 mt-5 ml-2 container-fluid"  >
-<div class="card-body"style="color: rgba(350, 800, 1600, 3200);>
+	<div id="l"><h2  class="card-body ml-1" style="color: rgba(350, 10, 300, 1000);" >LIBRARY</h2><h5 style="color: rgb(9, 232, 228);"><marquee>Reading impact 
+	but study impact more therefore READ and STUDY </marquee>
+  </h5
+  ></div>
+
+<div class="container">	
+<div  class="row">
+	<centre>
+		<div class="d-flex">
+		<div class="col-8 ">
+<div class=" col-sm-6 col-lg-11  card card-success mt-2 ml-1">
+<div class="card-body text-info"style="color: rgba(350, 800, 1600, 3200);">
  <label for="author">
  	AUTHOR:
  </label>
- <input type="" name="" id="secondinput"  class="form-control">
+ <input  placeholder="Enter name" type="text" name="" id="firstInput"  class="form-control">
 </div>
 
-<div class=card-body style="color: rgba(350, 800, 1600, 3200);>
+<div class="card-body text-info" style="color: rgba(350, 800, 1600, 3200);">
   <label for="author">
  	TITLE:
  </label>
- <input type="" name="" id="firstinput" class="form-control">
+ <input placeholder=" Enter the title of the book " type="text" name="" id="secondInput" class="form-control">
 </div>
 
-<div class="card-body" style="color: rgba(350, 800, 1600, 3200);>
+<div class="card-body text-info" style="color: rgba(350, 800, 1600, 3200);">
   <label for="author">
  	PAGES:
  </label>
- <input type="" name="" id="thirdinput" class="form-control">
+ <input placeholder="Enter number of pages" type="number" name="" id="thirdInput" class="form-control">
  </div>
 
 
  <div class="card-body">
- <button  class="btn btn-success form-control" onclick="display()">ADD</button>
+ <button  class=" btn btn-success text-align-center form-control" onclick="add()">ADD</button>
   </div>
-  <div id="ij" style="background-color: red;display:none">
-  	<button onclick="empty()">ok</button>
-  	<h3  style="color ="#fff">please fill the empty space</h3>	
-  	
+  <div class="pl-5" id="notify" style="background-color: red;display:none">
+  	<h3  style="color :#fff">please fill the empty space. press  ok to remove notification</h3>	
+  	<button class="ml-5" onclick="empty()"> ok</button>
   </div>
 
+  <div class="pl-5" id="Storenotify" style="background-color: red;display:none">
+	<h3  style="color :#fff">empty storage. Add books to store. press  ok to remove notification </h3>	
+	<button class="ml-5" onclick="emptyStorage()">ok</button>
+</div>
+
+<div class="pl-5" id="bookInfo" style="background-color: red;display:none">
+	<h3 style="color :#fff">Book Title and Author already exist. Press  ok to remove notification </h3>	
+	<button class="ml-5" onclick="booksInfo()">ok</button>
+</div>
  <div class="card-body" >
- 	<button  class="btn btn-info form-control" onclick="show()">DISPLAY BOOKS </button>
+ 	<button  class=" btn btn-info text-light form-control" onclick="show()">DISPLAY BOOKS </button>
  </div>
-</div ><br><br><br><br>
+<br><br><br><br>
 
 
-<table id="" class="table table-bordered table-hover col-md-6 container-fluid mt-5" style="color: #fff;" >
+<table id="" class="table table-bordered table-hover col-md-6 container-fluid mt-5" style="color:crimson;" >
 		<thead >
 			<tr>
 				<th>TITLE</th>
@@ -84,43 +97,73 @@
 </table>
 
 </div>
-<body>
+</centre>
+</div>
+<div class="col-4 text-light bg-secondary">
+	<div class="mb-5 p-2 " >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt fugiat 
+		neque eligendi suscipit dignissimos ipsam. Tempore delectus fugit sit fugiat minus, itaque aspernatur
+		 veniam facere accusantium, quos a tempora nulla? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex aut illum sequi, 
+		 assumenda deserunt, voluptates, culpa sapiente quasi quo rerum recusandae! At enim incidunt quis esse voluptatem dicta error iusto!
+	</div>
+	<div class="bg-secondary p-2" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt fugiat 
+		neque eligendi suscipit dignissimos ipsam. Tempore delectus fugit sit fugiat minus, itaque aspernatur
+		 veniam facere accusantium, quos a tempora nulla? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex aut illum sequi, 
+		 assumenda deserunt, voluptates, culpa sapiente quasi quo rerum recusandae! At enim incidunt quis esse voluptatem dicta error iusto!
+	</div>
+</div>
 
-
+</div>
+<!-- </div>
+</div> -->
 
 	<script type="text/javascript">
-	 
-function display(){
-var library=JSON.parse(localStorage.books);
-
-var a={TITLE:firstinput.value,AUTHOR:secondinput.value,PAGES:thirdinput.value}	       	
+	 library = []
+function add(){
+		if(firstInput.value==""|| secondInput.value==""|| thirdInput.value=="")
+	 	{document.getElementById("notify").style.display="";
+	}else{
+		for (let i = 0; i <library.length; i++) {
+		console.log(library[i].AUTHOR)
+		console.log(firstInput.value) 
+		if (firstInput.value == library[i].AUTHOR && secondInput.value == library[i].TITLE ) {
+			document.getElementById("bookInfo").style.display="";
+			var a={ AUTHOR:firstInput.value = block, TITLE:secondInput.value = block, PAGES:thirdInput.value = block 
+	}
+	}}
+		var a={ AUTHOR:firstInput.value, TITLE:secondInput.value, PAGES:thirdInput.value }	       	
 	 library.push(a);
 	 localStorage.books=JSON.stringify(library);
 	 var relibrary= JSON.parse(localStorage.books);	
-	 console.log(relibrary);
-	 if(firstinput.value==""||secondinput.value==""||thirdinput.value)
-	 	{document.getElementById("ij").style.display="";
+	 console.log(relibrary)
+	
+	firstInput.value = ""
+	secondInput.value = ""
+	thirdInput.value = ""
 	}
 }
-
-	 function empty(){
-	 	document.getElementById("ij").style.display="none";
-
-	 }
-
-	 
-
-	 function show(){ library=JSON.parse(localStorage.books);
-
-		for  (  var i=0; i<library.length; i++ )
+function empty(){
+	 	document.getElementById("notify").style.display="none";
+	}
+function emptyStorage(){
+	 	document.getElementById("Storenotify").style.display="none";
+	}
+	function booksInfo(){
+	 	document.getElementById("bookInfo").style.display="none";
+	}
+function show(){
+	localStorage.books = JSON.stringify(library);
+	var relibrary = JSON.parse(localStorage.books);
+	console.log(relibrary)
+	if(!relibrary || library.length==0){
+		document.getElementById("Storenotify").style.display="";
+		 }else{
+			for  (  var i=0; i<library.length; i++ )
 		{
- var lis; lis= '<tr><td>'+ library[i].TITLE + '</td>'+'<td>' +library[i]. AUTHOR+'</td>'+'<td>'+library[i].PAGES+'</td></tr>';
+ var lis; lis= '<tr><td>'+ library[i].TITLE + '</td>'+'<td>' + library[i].AUTHOR+'</td>'+'<td>'+ library[i].PAGES+'</td></tr>';
   	 	    showtab.innerHTML+=lis;
-
-	 	
- } 		
+ }
+	}		 		
 }
 </script>
-</div>
-</body></div></div>
-</htm>
+</body>
+</html>
